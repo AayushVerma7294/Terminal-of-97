@@ -3,84 +3,99 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Terminal</title>
-<script>
-function redirectToWebsite() {
-    var input = document.getElementById("numberInput").value.trim();
-
-    // Check if input is a valid number
-    if (!isNaN(input)) {
-        var number = parseInt(input);
-
-        // Multiply the number by 64
-        var multipliedNumber = number * 64;
-
-        // Construct the URL based on the multiplied number
-        var url = 398 + multipliedNumber;
-
-        // Redirect to the constructed URL
-        window.location.href = url;
-    } else {
-        alert("Please enter a valid number.");
+<title>Telephone Keypad</title>
+<style>
+    /* Styling for the keypad and display */
+    body {
+        font-family: Bookman Old Style, sans-serif;
+        text-align: center;
+        padding-top: 0px;
+        background-color: black; /* Light background */
     }
-    return false; // Prevent form submission
-}
-     function playSoundAndRedirect(url) {
-    // Play sound (adjust sound URL as needed)
-    var audio = new Audio('path_to_your_sound_file.mp3');
-    audio.play();
-
-    // Set waiting time (in milliseconds)
-    var waitingTime = 3000; // 3 seconds (adjust as needed)
-
-    // Wait for waitingTime milliseconds before redirecting
-    setTimeout(function() {
-        window.location.href = url;
-    }, waitingTime);
+    .keypad {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3px; /* Reduced gap */
+        max-width: 260px;
+        margin: 1 auto;
+    }
+    .key {
+        padding: 20px;
+        font-size: 15px;
+        background-color: #232b2b; /* Black background */
+        color: #fff; /* White text */
+        border: 1px solid #FFF;
+        cursor: pointer;
+        text-align: center;
+    }
+    #display {
+        margin-top: 15px;
+        padding: 16px;
+        font-size: 15px;
+        border: 1px solid RED;
+        width: 100%;
+        max-width: 200px;
+        margin: 0 auto;
+        background-color: GREY;
+    }
+    #submitBtn {
+        margin-top: 20px;
+        padding: 5px 5px;
+        font-size: 15px;
+        background-color: #ffff;
+        color: Black;
+        border: none;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+<center>
+<FONT COLOR="WHITE" FACE="TIMES NEW ROMAN">
+   <u> <h1>WELCOME TO TERMINAL</h1></u></FONT>
+<script>
+function addToDisplay(number) {
+    // Get the display element
+    var display = document.getElementById('display');
+    // Append the clicked number to the display content
+    display.textContent += number;
 }
 </script>
-</head>
-<body BGCOLOR="BLACK">
-<center>
-<FONT COLOR="WHITE">
-    <h1>WELCOME TO TERMINAL</h1>
-<br>
-    <form onsubmit="return redirectToWebsite()">
-        <input type="text" id="numberInput" maxlength="10" pattern="[0-9]*" title="Please enter only numeric digits" required>
+<div id="display"></div>
+<button id="submitBtn" onclick="calculateAndRedirect()">Submit</button>
 <br>
 <br>
-        <input type="submit" value="Call">
-    </form>
-<BR>
-    // Telephone Keypad
-<table border="1" cellspacing="1" cellpadding="2">
-<tr>
-<td><font size="10">1&nbsp;&nbsp;&nbsp;</font>   </td>
-<td><font size="10">2&nbsp;</font>ABC&nbsp;</td>
-<td><font size="10">3&nbsp;</font>DEF&nbsp;</td>
-</tr>
-<tr>
-<td><font size="10">4&nbsp;</font>GHI&nbsp;</td>
-<td><font size="10">5&nbsp;</font>JKL&nbsp;</td>
-<td><font size="10">6&nbsp;</font>MNO&nbsp;</td>
-</tr>
-<tr>
-<td><font size="10">7&nbsp;</font>PQRS</td>
-<td><font size="10">8&nbsp;</font>TUV&nbsp;</td>
-<td><font size="10">9&nbsp;</font>WXYZ&nbsp;</td>
-</tr>
-<tr>
-<td><font size="10">*</font>&nbsp;</td>
-<td><font size="10">0&nbsp;</font>+&nbsp;</td>
-<td><font size="10">#&nbsp;</font>&nbsp;</td>
-</tr>
-</table>
-<br>
-<p> For Telephone Directory Call "555-5478"
-</FONT>
-</center>
-<br><br><br><br>
-<font color="white">Created By: Vortex Inc. &copy;1997-2024</font>
+<div class="keypad">
+    <div class="key" onclick="addToDisplay('1')">1 </div>
+    <div class="key" onclick="addToDisplay('2')">2 ABC</div>
+    <div class="key" onclick="addToDisplay('3')">3 DEF</div>
+    <div class="key" onclick="addToDisplay('4')">4 GHI</div>
+    <div class="key" onclick="addToDisplay('5')">5 JKL</div>
+    <div class="key" onclick="addToDisplay('6')">6 MNO</div>
+    <div class="key" onclick="addToDisplay('7')">7 PQRS</div>
+    <div class="key" onclick="addToDisplay('8')">8 TUV</div>
+    <div class="key" onclick="addToDisplay('9')">9 WXYZ</div>
+    <div class="key" onclick="addToDisplay('*')">*</div>
+    <div class="key" onclick="addToDisplay('0')">0 </div>
+    <div class="key" onclick="addToDisplay('#')">#</div>
+</div>
+
+<script>
+
+function calculateAndRedirect() {
+    // Get the current displayed number
+    var numberString = document.getElementById('display').textContent;
+    // Convert the number to integer
+    var number = parseInt(numberString);
+    // Perform calculation
+    var result = (number * 64) + 231;
+    // Redirect to the calculated page
+    window.location.href =result + '.html';
+}
+
+</script><font color="white"><BR> For Telephone Directory Call "555-5478"
+</P><br>
+Created By: Vortex Inc. &copy;1997-2024</font>
 <br>
 <font color="red" face="Arial">WARNING!:- This is an Alpha Version so it has its unstablility, Don't expect it to be perfect</font>
 </body>
