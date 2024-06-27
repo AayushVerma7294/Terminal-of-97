@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terminal</title>
+<script>
+function redirectToWebsite() {
+    var input = document.getElementById("numberInput").value.trim();
+
+    // Check if input is a valid number
+    if (!isNaN(input)) {
+        var number = parseInt(input);
+
+        // Multiply the number by 64
+        var multipliedNumber = number * 64;
+
+        // Construct the URL based on the multiplied number
+        var url = multipliedNumber;
+
+        // Redirect to the constructed URL
+        window.location.href = url;
+    } else {
+        alert("Please enter a valid number.");
+    }
+    return false; // Prevent form submission
+}
+     function playSoundAndRedirect(url) {
+    // Play sound (adjust sound URL as needed)
+    var audio = new Audio('path_to_your_sound_file.mp3');
+    audio.play();
+
+    // Set waiting time (in milliseconds)
+    var waitingTime = 3000; // 3 seconds (adjust as needed)
+
+    // Wait for waitingTime milliseconds before redirecting
+    setTimeout(function() {
+        window.location.href = url;
+    }, waitingTime);
+}
+</script>
+</head>
+<body BGCOLOR="BLACK">
+<center>
+<FONT COLOR="WHITE">
+    <h1>WELCOME TO TERMINAL</h1>
+<br>
+    <form onsubmit="return redirectToWebsite()">
+        <input type="text" id="numberInput" maxlength="10" pattern="[0-9]*" title="Please enter only numeric digits" required>
+<br>
+<br>
+        <input type="submit" value="Call">
+    </form>
+<BR>
+<table border="1" cellspacing="1" cellpadding="2">
+<tr>
+<td><font size="10">1&nbsp;&nbsp;&nbsp;</font>   </td>
+<td><font size="10">2&nbsp;</font>ABC&nbsp;</td>
+<td><font size="10">3&nbsp;</font>DEF&nbsp;</td>
+</tr>
+<tr>
+<td><font size="10">4&nbsp;</font>GHI&nbsp;</td>
+<td><font size="10">5&nbsp;</font>JKL&nbsp;</td>
+<td><font size="10">6&nbsp;</font>MNO&nbsp;</td>
+</tr>
+<tr>
+<td><font size="10">7&nbsp;</font>PQRS</td>
+<td><font size="10">8&nbsp;</font>TUV&nbsp;</td>
+<td><font size="10">9&nbsp;</font>WXYZ&nbsp;</td>
+</tr>
+<tr>
+<td><font size="10">*</font>&nbsp;</td>
+<td><font size="10">0&nbsp;</font>+&nbsp;</td>
+<td><font size="10">#&nbsp;</font>&nbsp;</td>
+</tr>
+</table>
+<br>
+<p> For Telephone Directory Call "555-5478"
+</FONT>
+</center>
+<br><br><br><br>
+<font color="white">Created By: Vortex Inc. &copy;1997-2024</font>
+<br>
+<font color="red" face="Arial">WARNING!:- This is an Alpha Version so it has its unstablility, Don't expect it to be perfect</font>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Automatic Redirection</title>
+<script>
+// Function to redirect after a delay
+function redirectAfterDelay() {
+    var url = "https://www.example.com"; // Replace with your desired URL
+    var delayInSeconds = 7; // Adjust the delay time in seconds
+
+    setTimeout(function() {
+        window.location.href = url;
+    }, delayInSeconds * 1000); // Convert seconds to milliseconds
+}
+</script>
+</head>
+<body onload="redirectAfterDelay()">
+    <h2>Redirecting in 7 seconds...</h2>
+    <p>If you are not redirected, <a href="https://www.example.com">click here</a>.</p>
+</body>
+</html>
