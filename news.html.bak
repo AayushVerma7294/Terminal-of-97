@@ -1,0 +1,116 @@
+<html>
+<body>
+<style>
+
+body{
+background-color:grey;
+font-style:bold;
+font-size:21px;
+}
+
+.outer {
+    text-align:center;
+    background-color:grey;
+
+}
+.block, .center, .right
+{
+width: auto;
+    height: 400px;
+	font-family: Bookman Old Style;
+	display: inline-block;
+	text-decoration:none;
+	FLEX: 1;
+	overflow:auto;
+	border: 2px solid lime;
+	    color: white;
+}
+.block {
+    margin: 0px;
+    background-color: red;
+    color: white;
+	width:auto;
+    
+}
+.center {
+    width: 50%;
+    display: inline-block;
+    margin: 0px;
+    background-color: green;
+    font-family: Bookman Old Style;
+
+	
+
+    }
+.right{
+    width: auto;
+    display: inline-block;
+    background-color: blue;
+    font-family: Bookman Old Style;
+    color: white;
+    text-decoration:none;
+	flex: 1;
+	color:white;
+    }
+p{
+	font-size:16;
+	font-family:Times New Roman;
+	style:italic
+	}
+    
+
+
+h1{
+text-align:center;
+font-family:Comic Sans MS;
+}
+
+body{
+	font-size=14rem
+	font-color="white"
+}
+
+</style>
+<body>
+<h1> MADISON PUBLICATION</h1>
+
+
+<div class="outer">
+    <div class="block" style="margin-left: 10px; margin-right: 5px;">
+
+        	HOT TOPIC
+            	<br><br>SPORTS
+				<br><br>SCIENCE
+				<br><br>TECHNOLOGY
+				<br><br>WEATHER
+				<br><br>FUNNY
+				<br><br>
+				
+    </div>
+    <div class="center">ON TRENDING</h4>
+    <marquee behaviour="scroll" direction="up" scrollamount=6 onMouseOver="this.stop()" onMouseOut="this.start()">
+            	<br><br>1. An unidentified man fell of in Lego city which leads to major collapse on city economy
+				<br><br>2. Texas Instrumentals launched the next generation calculator called "TI-86"
+				<br><br>3. People in Troland found a way to make energy with 100 percent efficency
+				<br><br>4. A research claims that 60% of teenagers taking anti-depressents causing lack of emotion
+				<br><br>5. Vortex Inc. working on a private project named "Terminal"
+				
+            </marquee>
+       </div>
+    <div class="right"style="margin-left: 2px; margin-right: 1px;">EXPLORE<br>
+    
+            	<td><br>SPORTS
+				<br><br>SCIENCE
+				<br><br>TECHNOLOGY
+				<br><br>WEATHER
+				<br><br>FUNNY
+				<br><br>
+				</div>
+</div>
+</center>
+<br>
+<hr>
+<p> Here for future ideas:-<br><br>
+1. I will add Some ads [what do you think how i am gonna run this offline html]
+</body>
+</html>

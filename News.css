@@ -1,0 +1,107 @@
+body {
+			background-color: black;
+			font-style: bold;
+			font-size: 21px;
+			
+		}
+
+a
+{color:white;}
+a:link {
+text-decoration: none;
+}
+a:hover{
+	color:rgb(51, 255, 0);
+}
+		.outer {
+			text-align: left;
+			background-color: black;
+			display: flex;
+			flex-direction: row;
+			gap: 10px;
+			justify-content: center;
+			padding:0px 1%;
+		}
+		.banner
+		{
+			display: block;
+			flex-direction: row;
+			padding:0px;
+			background-color: black;
+		}
+		.block,
+		.center,
+		.right {
+			height: 400px;
+			font-family: 'Times New Roman', Times, serif;
+			display: inline-block;
+			text-decoration: none;
+			flex: 1;
+			overflow: auto;
+			border: 10px outset rgba(58, 168, 8, 0.911);
+			color: white;
+			margin: 0px;
+			padding:5px;
+		}
+
+		.block {
+			background-color: rgba(5, 5, 5, 0);
+
+		}
+
+		.center {
+			text-align: center;
+			background-color: rgb(0, 0, 0);
+			flex:3;
+		}
+
+		.right {
+			text-align:left;
+			background-color: rgb(0, 0, 0);
+			text-decoration: none;
+		}
+
+		p {
+			font-size: 18;
+			font-family: Times New Roman;
+			font-style: italic;
+			color:white;
+		}
+
+
+
+		h1 {
+			text-align: center;
+			font-family: Comic Sans MS;
+			color:#f9f9f9
+		}
+		h5 {
+			margin-top: 1px;
+			margin-bottom: 3px;
+			text-align:center;
+			font-size: 25px;
+			color:rgb(255, 245, 245);
+		}
+		.parent-footer {
+			background-color: purple;
+			display: flex;
+			flex-direction: row;
+			gap: 10px;
+			justify-content: center;
+			padding:0px 1%;
+			;
+		}
+		.footer a {
+            color: #f9f9f9;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            color: #a2b4a2;
+        }
+table
+{
+	font-size: 18;
+	font-family: 'Segoe UI';
+	text-align:center;
+}

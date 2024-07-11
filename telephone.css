@@ -1,0 +1,42 @@
+ /* Styling for the keypad and display */
+ body {
+    font-family: Bookman Old Style, sans-serif;
+    text-align: center;
+    padding-top: 0px;
+    background-color: black; /* Light background */
+}
+.keypad {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3px; /* Reduced gap */
+    max-width: 260px;
+    margin: 1 auto;
+}
+.key {
+    padding: 20px;
+    font-size: 15px;
+    background-color: #232b2b; /* Black background */
+    color: #fff; /* White text */
+    border: 1px solid #FFF;
+    cursor: pointer;
+    text-align: center;
+}
+#display {
+    margin-top: 15px;
+    padding: 16px;
+    font-size: 15px;
+    border: 1px solid RED;
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+    background-color: GREY;
+}
+#submitBtn {
+    margin-top: 20px;
+    padding: 5px 5px;
+    font-size: 15px;
+    background-color: #ffff;
+    color: Black;
+    border: none;
+    cursor: pointer;
+}
